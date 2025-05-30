@@ -16,6 +16,7 @@
   --primary-color-light: #f6f5ff;
   --toogle-color: #ddd;
   --text-color: #707070;
+  --link-color: #128BB5;
 
   /* Transition */
   --tran-02: all 0.2s ease;
@@ -270,6 +271,7 @@ body.dark .switch::before {
   left: 24px;
 }
 
+/* Main content */
 .home {
   position: relative;
   left: 250px;
@@ -277,16 +279,70 @@ body.dark .switch::before {
   width: calc(100% - 250px);
   background: var(--body-color);
   transition: var(--tran-05);
-}
-
-.home .text {
-  font-size: 30px;
-  font-weight: 500px;
-  color: var(--text-color);
-  padding: 8px 40px;
+  display: grid;
+  place-items: center;
+  margin-inline: 1.5rem;
+  padding-block: 5rem;
 }
 
 .sidebar.close ~ .home{
   left: 88px;
   width: calc(100% - 88px);
+}
+
+/* Card */
+
+.card-container {
+  display: grid;
+  row-gap: 3.5rem;
+}
+
+.card-article {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-img {
+  width: 328px;
+  border-radius: 1.5rem;
+}
+
+.card-data {
+  width: 280px;
+  background: var(--sidebar-color);
+  padding: 1.5rem 2rem;
+  box-shadow: 0 8px 24px hsla(0, 0%, 0%, .15);
+  border-radius: 1rem;
+  position: absolute;
+  bottom: -9rem;
+  left: 0;
+  right: 0;
+  margin-inline: auto;
+  opacity: 0;
+  transition: opacitiy 1s 1s;
+}
+
+.card-description {
+  display: block;
+  font-size: 13px;
+  margin-bottom: .25rem;
+  color: var(--text-color);
+}
+
+.card-title {
+  font-size: 20px;
+  font-weight: 500;
+  color: var(--text-color);
+  margin-bottom: .75rem;
+}
+
+.card-button {
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--link-color);
+}
+
+.card-button:hover {
+  text-decoration: underline;
 }
