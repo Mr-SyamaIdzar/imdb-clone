@@ -409,3 +409,40 @@ body.dark .switch::before {
     overflow: hidden;
   }
 }
+
+@media screen and (max-width: 340px) {
+  .home {
+    margin-inline-end: 1rem;
+  }
+
+  .card-data {
+    width: 250px;
+    padding: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1120px) {
+  .home {
+    height: 100vh;
+  }
+
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .card-img {
+    width: 348px;
+  }
+
+  .card-data {
+    width: 316px;
+    padding-inline: 2.5rem;
+  }
+}
